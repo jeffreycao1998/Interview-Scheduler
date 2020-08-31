@@ -5,8 +5,8 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "normalize.css": "^8.0.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-scripts": "3.0.0"
   },
   "scripts": {
@@ -30,15 +30,14 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@storybook/addon-actions": "^5.0.10",
-    "@storybook/addon-backgrounds": "^5.0.10",
-    "@storybook/addon-links": "^5.0.10",
-    "@storybook/addons": "^5.0.10",
-    "@storybook/react": "^5.0.10",
-    "@testing-library/jest-dom": "^4.0.0",
-    "@testing-library/react": "^8.0.7",
-    "babel-loader": "^8.0.5",
+    "@babel/core": "^7.11.4",
+    "@storybook/addon-actions": "^5.3.21",
+    "@storybook/addon-backgrounds": "^5.3.21",
+    "@storybook/addon-links": "^5.3.21",
+    "@storybook/addons": "^5.3.21",
+    "@storybook/react": "^5.3.21",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^8.0.9",
     "node-sass": "^4.14.1"
   },
   "jest": {
