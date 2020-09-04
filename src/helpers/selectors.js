@@ -1,10 +1,8 @@
 export function getAppointmentsForDay(state, dayName) {
   const result = [];
   const day = state.days.filter(day => day.name === dayName);
-  let appointmentIds;
-
   if (day.length > 0) {
-    appointmentIds = day[0].appointments;
+    const appointmentIds = day[0].appointments;
 
     for (let appointmentId of appointmentIds) {
       result.push(state.appointments[appointmentId])

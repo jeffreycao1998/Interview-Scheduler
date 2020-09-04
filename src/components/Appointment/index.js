@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles.scss';
 import Header from './Header';
 import Show from './Show';
@@ -24,6 +24,10 @@ export default function Appointment(props) {
     props.interview ? SHOW : EMPTY
   );
 
+  useEffect(() => {
+    props.interview ? transition(SHOW) : transition(EMPTY);
+  },[props.interview]);
+
   const onSave = (name, interviewer) => {
     const interview = {
       student: name,
@@ -32,13 +36,19 @@ export default function Appointment(props) {
     
     transition(SAVE);
 
-    props.bookInterview(props.id, interview, transition, SHOW)
+    props
+      .bookInterview(props.id, interview)
+      .then(() => transition(SHOW))
+      .catch(err => transition(ERROR_SAVE, true));
   };
 
   const onConfirm = () => {
     transition(DELETE, true);
 
-    props.cancelInterview(props.id, transition, EMPTY);
+    props
+      .cancelInterview(props.id)
+      .then(() => transition(EMPTY))
+      .catch(err => transition(ERROR_DELETE, true));
   };
 
   const onDelete = () => {
@@ -56,7 +66,7 @@ export default function Appointment(props) {
   const onCancel = () => {
     back();
   };
-
+  
   return (
     <article className="appointment">
       <Header time={props.time} />
@@ -82,7 +92,7 @@ export default function Appointment(props) {
           onSave={onSave}
         />
       )}
-      {mode === SHOW && (
+      {mode === SHOW && props.interview && (
         <Show
           student={props.interview.student}
           interviewer={props.interview.interviewer}
