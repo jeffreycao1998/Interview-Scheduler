@@ -19,7 +19,7 @@ export default function useApplicationData() {
     switch (action.type) {
 
       case SET_DAY: {
-        const day = { action }
+        const { day } = action
         return { 
           ...state, 
           day 
