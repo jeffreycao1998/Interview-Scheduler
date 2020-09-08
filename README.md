@@ -9,8 +9,7 @@ The server is hosted on heroku while the client is hosted on netlify where you c
 ## How it works
 
 <figure class="video_container">
-  <iframe src="https://www.youtube.com/watch?v=xnTNLPR-mtU&ab_channel=WatsYourPowerLvl" frameborder="0" allowfullscreen="true"> 
-</iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/xnTNLPR-mtU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </figure>
   
 ## Features
