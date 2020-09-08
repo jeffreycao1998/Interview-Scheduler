@@ -1,3 +1,4 @@
+// if the day selected is Monday, get all the appointments scheduled on that day
 export function getAppointmentsForDay(state, dayName) {
   const result = [];
   const day = state.days.filter(day => day.name === dayName);
@@ -11,6 +12,7 @@ export function getAppointmentsForDay(state, dayName) {
   return result;
 };
 
+// replaces the interviewer id with the actual interviewer object
 export function getInterview(state, interview) {
   if (!interview) return null;
 
@@ -21,6 +23,7 @@ export function getInterview(state, interview) {
   return result;
 }
 
+// if the day is monday, get all the interviewers for monday
 export function getInterviewersForDay(state, dayName) {
   const result = [];
   const day = state.days.filter(day => day.name === dayName);

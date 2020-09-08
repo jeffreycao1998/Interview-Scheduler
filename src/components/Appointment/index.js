@@ -24,9 +24,10 @@ export default function Appointment(props) {
     props.interview ? SHOW : EMPTY
   );
 
+  // listens for props.interview changes (ie state changed from another socket)
   useEffect(() => {
     props.interview ? transition(SHOW) : transition(EMPTY);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[props.interview]);
 
   const onSave = (name, interviewer) => {

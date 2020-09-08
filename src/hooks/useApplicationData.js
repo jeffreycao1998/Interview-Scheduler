@@ -40,8 +40,10 @@ export default function useApplicationData() {
   },[]);
 
   useEffect(() => {
+    // creates a web socket connection to the server
     const webSocket = new WebSocket('wss://interview-scheduler-db.herokuapp.com/');
 
+    // listen for messages from the server
     webSocket.onmessage = (event) => {
       const data = JSON.parse(event.data);
       

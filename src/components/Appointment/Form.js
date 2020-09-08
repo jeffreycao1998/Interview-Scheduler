@@ -5,26 +5,26 @@ import InterviewerList from '../InterviewerList';
 export default function Form(props) {
   const [ name, setName ] = useState(props.name || '');
   const [ interviewer, setInterviewer ] = useState(props.interviewer || null);
-  const [error, setError] = useState('');
+  const [ error, setError ] = useState('');
 
+  // resets name and interview field
   const reset = () => {
     setName('');
     setInterviewer(null);
   };
 
+  // prevents user from saving an interview spot without a name
+  const validate = () => {
+    if (name === '') {
+      return setError('Student name cannot be blank');
+    }
+    setError('');
+    props.onSave(name, interviewer);
+  };
+
   const cancel = () => {
     props.onCancel();
     reset();
-  };
-
-  const validate = () => {
-    if (name === '') {
-      setError('Student name cannot be blank');
-      return;
-    }
-
-    setError('');
-    props.onSave(name, interviewer);
   };
 
   return (
