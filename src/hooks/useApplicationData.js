@@ -1,81 +1,19 @@
 import { useReducer, useEffect } from 'react';
 import axios from 'axios';
-
+import reducer, {
+  SET_DAY,
+  SET_APPLICATION_DATA,
+  SET_INTERVIEW,
+  UPDATE_SPOTS
+} from '../reducers/application'
 
 export default function useApplicationData() {
-  const SET_DAY = "SET_DAY";
-  const SET_APPLICATION_DATA = "SET_APPLICATION_DATA";
-  const SET_INTERVIEW = "SET_INTERVIEW";
-  const UPDATE_SPOTS = "UPDATE_SPOTS";
-
   const [ state, dispatch ] = useReducer(reducer, {
     day: 'Monday',
     days: [],
     appointments: {},
     interviewers: {},
   });
-
-  function reducer(state, action) {
-    switch (action.type) {
-
-      case SET_DAY: {
-        const { day } = action
-        return { 
-          ...state, 
-          day 
-        };
-      }
-
-      case SET_APPLICATION_DATA: {
-        const { days, appointments, interviewers } = action.data;
-        return { 
-          ...state, 
-          days, 
-          appointments, 
-          interviewers 
-        };
-      }
-
-      case SET_INTERVIEW: {
-        const { id, interview } = action.data;
-
-        const appointment = {
-          ...state.appointments[id],
-          interview: interview
-        };
-
-        const appointments = {
-          ...state.appointments,
-          [id]: appointment
-        };
-        return {
-          ...state,
-          appointments: { ...appointments }
-        };
-      }
-
-      case UPDATE_SPOTS: {
-        const days = state.days.map(day => {
-          if (day.name === state.day) {
-            day.spots = day.appointments.filter(appointmentId => {
-              return state.appointments[appointmentId].interview === null;
-            }).length - 1;
-          }
-          return day;
-        });
-        return {
-          ...state,
-          days: [...days]
-        };
-      }
-
-      default: {
-        throw new Error(
-          `Tried to reduce with unsupported action type: ${action.type}`
-        );
-      }
-    }
-  }
 
   const setDay = day => {
     dispatch({
@@ -129,7 +67,6 @@ export default function useApplicationData() {
   },[]);
 
   const bookInterview = (id, interview) => {
-
     return axios.put(`/api/appointments/${id}`, {
       id,
       interview
@@ -137,7 +74,6 @@ export default function useApplicationData() {
   };
 
   const cancelInterview = (id) => {
-
     return axios.delete(`/api/appointments/${id}`)
   };
 

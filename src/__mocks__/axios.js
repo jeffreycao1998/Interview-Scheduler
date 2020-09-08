@@ -79,5 +79,18 @@ export default {
         data: fixtures.interviewers
       })
     }
-  })
+  }),
+  put: jest.fn()
+    .mockRejectedValue({
+      status: 400,
+    })
+  , 
+  delete: jest.fn()
+    .mockResolvedValueOnce({
+      status: 204,
+      statusText: 'No Content'
+    })
+    .mockRejectedValue({
+      status: 400,
+    })
 }
