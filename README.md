@@ -11,6 +11,7 @@ The server is hosted on heroku while the client is hosted on netlify where you c
 <figure class="video_container">
   <iframe src="https://www.youtube.com/watch?v=xnTNLPR-mtU&ab_channel=WatsYourPowerLvl" frameborder="0" allowfullscreen="true"> 
 </iframe>
+</figure>
   
 ## Features
 
