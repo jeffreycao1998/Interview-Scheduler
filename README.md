@@ -4,7 +4,7 @@ Interview Scheduler is an app that allows you to well...schedule interviews with
 
 <a href="https://fervent-franklin-5beb6f.netlify.app/"><img src="https://im2.ezgif.com/tmp/ezgif-2-ba2450033c7e.gif" title="FVCproductions" alt="FVCproductions"></a>
 
-The server is hosted on heroku while the client is hosted on netlify where you can take the app for a test drive.
+The server is hosted on heroku while the client is hosted on netlify. Click on the gif above to test it out!
 
 ## How it works
 
