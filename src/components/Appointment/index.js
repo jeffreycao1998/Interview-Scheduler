@@ -20,13 +20,13 @@ const ERROR_SAVE = "ERROR_SAVE";
 const ERROR_DELETE = "ERROR_DELETE";
 
 export default function Appointment(props) {
-  const { mode, transition, back, history } = useVisualMode(
+  const { mode, transition, back } = useVisualMode(
     props.interview ? SHOW : EMPTY
   );
 
   useEffect(() => {
     props.interview ? transition(SHOW) : transition(EMPTY);
-  },[props.interview]);
+  },[props.interview, transition]);
 
   const onSave = (name, interviewer) => {
     const interview = {
