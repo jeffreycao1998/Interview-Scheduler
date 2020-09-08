@@ -8,7 +8,7 @@ The server is hosted on heroku while the client is hosted on netlify. Click on t
   
 ## Features
 
-Utilises websockets for real time updates on slot availability. If someone books and interview in one slot, everyone connected will see that slot become taken. React allowed allowed for easy transitioning between different 'appointment slot' states (between saving, editing, showing an interview, showing an empty interview, and the loading screens). On the backend (seperate respository) responses are delayed by 1 sec purposely to show the loading states.
+Utilises websockets for real time updates on slot availability. If someone books and interview in one slot, everyone connected will see that slot become taken. React allowed allowed for easy transitioning between different 'appointment slot' states (between saving, editing, showing an interview, showing an empty interview, and the loading screens). On the backend (seperate respository) responses are purposely delayed by one second in order to show the different loading states.
 
 ## Testing
 
