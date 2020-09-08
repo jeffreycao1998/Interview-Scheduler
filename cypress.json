@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://localhost:8000",
+  "baseUrl": "https://interview-scheduler-db.herokuapp.com/",//"http://localhost:8000",
   "viewportWidth": 1280,
   "viewportHeight": 720
 }
