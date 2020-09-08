@@ -12,7 +12,7 @@ Utilises websockets for real time updates on slot availability. If someone books
 
 ## Testing
 
-Testing is an important part of any app. Interview scheduler uses two different testing librariers, Jest and Cypress. Jest was used mainly to perform integration tests while Cypress was used for end to end tests.
+Testing is an important part of any app. Interview scheduler uses two different testing librariers, Jest and Cypress. Jest was used mainly to perform integration tests while Cypress was used for end to end testing.
 
 ## Tech Used
 
