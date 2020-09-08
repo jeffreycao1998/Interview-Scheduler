@@ -26,7 +26,8 @@ export default function Appointment(props) {
 
   useEffect(() => {
     props.interview ? transition(SHOW) : transition(EMPTY);
-  },[props.interview, transition]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[props.interview]);
 
   const onSave = (name, interviewer) => {
     const interview = {
