@@ -15,8 +15,11 @@ export default function Form(props) {
 
   // prevents user from saving an interview spot without a name
   const validate = () => {
-    if (name === '') {
-      return setError('Student name cannot be blank');
+    if (!name) {
+      return setError('Student name cannot be blank!');
+    }
+    if (!interviewer) {
+      return setError('Must select an interviewer!');
     }
     setError('');
     props.onSave(name, interviewer);
