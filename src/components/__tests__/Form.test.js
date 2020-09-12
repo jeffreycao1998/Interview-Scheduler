@@ -64,11 +64,11 @@ describe("Form", () => {
     });
   
     fireEvent.click(getByText("Save"));
-    fireEvent.click(getByAltText(container, "Sylvia Palmer"));
+    fireEvent.click(getByAltText("Sylvia Palmer"));
   
     expect(queryByText(/student name cannot be blank/i)).toBeNull();
   
-    expect(onSave).toHaveBeenCalledTimes(0);
+    expect(onSave).toHaveBeenCalledTimes(1);
     expect(onSave).toHaveBeenCalledWith("Lydia Miller-Jones", null);
   });
 
