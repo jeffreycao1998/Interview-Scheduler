@@ -2,14 +2,23 @@
 
 Interview Scheduler is an app that allows you to well...schedule interviews with interviewers. Plain and simple!
 
-Add
-<a href="https://fervent-franklin-5beb6f.netlify.app/"><img src="https://github.com/jeffreycao1998/Interview-Scheduler/blob/master/docs/1.gif?raw=true" alt="FVCproductions"></a>
 
-Edit
-<a href="https://fervent-franklin-5beb6f.netlify.app/"><img src="https://github.com/jeffreycao1998/Interview-Scheduler/blob/master/docs/2.gif?raw=true" alt="FVCproductions"></a>
+> Add
 
-Delete
-<a href="https://fervent-franklin-5beb6f.netlify.app/"><img src="https://github.com/jeffreycao1998/Interview-Scheduler/blob/master/docs/3.gif?raw=true" alt="FVCproductions"></a>
+
+<a href="https://fervent-franklin-5beb6f.netlify.app/"><img src="https://github.com/jeffreycao1998/Interview-Scheduler/blob/master/docs/Add.gif?raw=true"></a>
+
+
+> Edit
+
+
+<a href="https://fervent-franklin-5beb6f.netlify.app/"><img src="https://github.com/jeffreycao1998/Interview-Scheduler/blob/master/docs/Edit.gif?raw=true"></a>
+  
+
+> Delete
+
+
+<a href="https://fervent-franklin-5beb6f.netlify.app/"><img src="https://github.com/jeffreycao1998/Interview-Scheduler/blob/master/docs/Delete.gif?raw=true"></a>
 
 The server is hosted on heroku while the client is hosted on netlify. Click on a gif above to test it out!
   
